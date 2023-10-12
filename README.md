@@ -45,8 +45,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
+> 
 <details>
 <summary>Database</summary>
   <ul>
@@ -69,7 +68,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> Coming Soon
 
 - [Live Demo Link coming soon](<replace-with-your-deployment-URL>)
 
@@ -79,17 +78,13 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
+> To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
-
-
 - vs code editor 
-- PostgreSQL
+- PostgreSQL V16 installed 
  
 
 ### Setup
