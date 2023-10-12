@@ -115,8 +115,7 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
+>
 - [ ] **[Implement more queries to  update the table content]**
 
 
@@ -136,8 +135,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
+>
 If you like this project dont forget to give it  a star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -146,8 +144,7 @@ If you like this project dont forget to give it  a star
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
+> 
 I would like to thank the Microverse team for their continuous support and guidance
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -156,8 +153,7 @@ I would like to thank the Microverse team for their continuous support and guida
 
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
+>
 - **[Do I have to use pgAdmin or the SQL shell for PostgreSQL commands]**
 
   - [You are allowed to choose any of them base on you preference]
@@ -174,7 +170,5 @@ No, PostgreSQL is not the same as SQL. PostgreSQL and SQL are related but distin
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
