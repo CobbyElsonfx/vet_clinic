@@ -33,12 +33,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-
 # 📖 [Vet Clinic] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
+> 
 **[Vet Clinic]** It's a simple web app for managing and displaying information about animals, services, and clients of a local Vet Clinic.
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -57,8 +54,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
+>
 - **Connects and interacts with a local or remote database server, using a PostgreSQL DBMS**
 - **Implements a PostgreSQL connecting the main components with the database server**
 
