@@ -45,3 +45,108 @@ WHERE name <> 'Gabumon';
 SELECT *
 FROM animals
 WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+
+
+-- ---day 2 -------
+
+-- Inside a transaction update the animals 
+-- table by setting the species column 
+-- to unspecified. Verify that change was made. 
+-- Then roll back the change and verify that the 
+-- species columns went back to the state before the transaction.
+
+BEGIN;
+
+UPDATE animals
+SET species = 'unspecified';
+
+SELECT * FROM animals;
+ROLLBACK;
+
+SELECT * FROM animals;
+
+
+-- Second transaction
+BEGIN;
+UPDATE animals
+SET species = 'digimon'
+WHERE name LIKE '%mon';
+
+UPDATE animals
+SET species = 'pokemon'
+WHERE species IS NULL;
+
+SELECT * FROM animals;
+COMMIT;
+
+SELECT * FROM animals;
+
+
+
+
+-- Third transaction for deleting  all recodrds in animals table
+BEGIN;
+
+DELETE FROM animals;
+
+ROLLBACK;
+
+
+
+
+-- Fourth transaction
+BEGIN;
+
+DELETE FROM animals
+WHERE date_of_birth > '2022-01-01';
+
+SAVEPOINT update_weights;
+
+UPDATE animals
+SET weight_kg = weight_kg * -1;
+
+ROLLBACK TO update_weights;
+
+UPDATE animals
+SET weight_kg = weight_kg * -1
+WHERE weight_kg < 0;
+
+COMMIT;
+
+
+
+-- Queries for questions 
+-- 1. How many animals are ther E
+
+SELECT COUNT(*) FROM animals;
+
+
+-- How many animals have never tried to escape?
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+
+
+
+-- What is the average weight of animals?
+
+SELECT AVG(weight_kg) FROM animals;
+
+
+-- Who escapes the most, neutered or not neutered animals?
+SELECT neutered, MAX(escape_attempts) AS max_escape_attempts
+FROM animals
+GROUP BY neutered;
+
+
+-- What is the minimum and maximum weight of each type of animal?
+SELECT species, MIN(weight_kg) AS min_weight, MAX(weight_kg) AS max_weight
+FROM animals
+GROUP BY species;
+
+
+-- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+SELECT species, AVG(escape_attempts) AS avg_escape_attempts
+FROM animals
+WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
+GROUP BY species;
+
