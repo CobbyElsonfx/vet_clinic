@@ -12,7 +12,8 @@ CREATE TABLE animals (
 
 -- Day 2
 ALTER TABLE animals
-ADD COLUMN species text
+ADD COLUMN species text;
+
 
 -- Day 3
 CREATE TABLE owners (

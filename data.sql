@@ -10,7 +10,8 @@ VALUES
 
 
 -- Second day 
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts, species)
+-- Inserting data into the "animals" table without the "species" column
+INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
 VALUES
     ('Charmander', '2020-02-08', -11, false, 0, 'Fire'),
     ('Plantmon', '2021-11-15', -5.7, true, 2, 'Grass'),
