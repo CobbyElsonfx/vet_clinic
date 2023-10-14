@@ -22,9 +22,10 @@ CREATE TABLE owners (
     age integer
 );
 
+
 CREATE TABLE species (
-    id serial PRIMARY KEY,
-    name text
+    id serial PRIMARY KEY
+    name text,
 )
 
 -- Remove the "species" column from the "animals" table
@@ -41,3 +42,25 @@ ADD COLUMN owner_id integer REFERENCES owners(id);
 
 
 
+-- day 4
+CCREATE TABLE vets (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    age INTEGER,
+    date_of_graduation DATE
+);
+
+--Specializations table
+CREATE TABLE specializations (
+    vet_id INTEGER REFERENCES vets(id),
+    species_id INTEGER REFERENCES species(id),
+    PRIMARY KEY (vet_id, species_id)
+);
+
+--Visits table
+CREATE TABLE visits (
+    vet_id INTEGER REFERENCES vets(id),
+    animal_id INTEGER REFERENCES animals(id),
+    visit_date DATE,
+    PRIMARY KEY (vet_id, animal_id, visit_date)
+);
